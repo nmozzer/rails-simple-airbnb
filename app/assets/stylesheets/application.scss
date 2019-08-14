@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .header {
+  display: flex;
+  justify-content: space-between;
+ }
+
+ .btn-add {
+  display: flex;
+  padding: 10px;
+}
+
+.list-all {
+  padding: 10px;
+}
+
+.btn-add a {
+  padding: 10px;
+}

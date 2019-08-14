@@ -1,0 +1,22 @@
+<div class="container">
+  <% @flats.each do |flat| %>
+    <div class="card">
+      <%= image_tag("https://picsum.photos/id/259/300/200", alt: "Flat Picture  ")%>
+      <div class="card-text">
+        <h3><%= flat.name %></h3>
+        <h4><%= flat.address %></h3>
+      </div>
+      <div class="card-symbols">
+        <i class="fas fa-user-friends"></i>
+        <h5><%= flat.number_of_guests %></h5>
+        <i class="fas fa-euro-sign"></i>
+        <h5><%= flat.price_per_night %></h5>
+      </div>
+      <div class="card-links">
+        <%= link_to "More Info", flat_path(flat) %>
+        <%= link_to "Edit Flat", edit_flat_path(flat) %>
+        <%= link_to "Remove", flat_path(flat), method: :delete, data: { confirm: "Are you sure?" } %>
+      </div>
+    </div>
+  <% end %>
+</div>
